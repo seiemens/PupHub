@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -6,6 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PupHub</title>
+    <!-- Shaka Player compiled library: -->
+    <script src="../shaka-player/dist/shaka-player.compiled.debug.js"></script>
+    <!-- Your application source: -->
+    <script src="../script/stream.js"></script>
+</head>
 </head>
 
 <body>
@@ -15,20 +20,37 @@
                 <img height="50" src="../picture/logo.png" />
             </div>
             <a href="../index.html" class="home-button">Home</a>
-            <a href="./livestream.html" class="video-button">Livestream</a>
-            <a href="./photo" class="home-button">Photos</a>
+            <a href="./livestream.html" class="video-button">Streams</a>
+            <a href="./photos.html" class="home-button">Photos</a>
+            <a href="./video.html" class="video-button">Videos</a>
+            <a href="./imprint.html" class="home-button">Imprint</a>
+
+
         </div>
     </div>
     <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
+    <!-- <h1>Livestream</h1>
+    <div id="twitch-embed"></div> -->
+    <br/><br/>
+    <h1>Streamplayer</h1>
+    <video class="player-border" id="video"
+    width="640"
+    poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+    controls autoplay></video>
 
-    <footer>
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-            <img alt="Creative Commons Lizenzvertrag" style="border-width:0"
-                src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-        </a>
-    </footer>
-
+    <div>
+        <div >
+            <select id="language" onchange="changeLang(this)">
+                <option value="en" disabled selected>Change language</option>
+                <option value="en">English</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="fr">French</option>
+                <option value="pt-BR">Portuguese</option>
+                <option value="es">Spanish</option>
+            </select>
+        </div>
+    </div>
 </body>
 
 </html>

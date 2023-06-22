@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+ <head>
+    <link rel="stylesheet" href="../style/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PupHub</title>
+</head> 
+
+<body>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <img height="50" src="../picture/logo.png" />
+            </div>
+            <a href="../index.html" class="home-button">Home</a>
+            <a href="./livestream.html" class="video-button">Streams</a>
+            <a href="./photos.html" class="home-button">Photos</a>
+            <a href="./video.html" class="video-button">Videos</a>
+            <a href="./imprint.html" class="home-button">Imprint</a>
+        </div>
+    </div>
+
+    <h1>Subtitle Video</h1>
+    <video id="video" controls>
+        <source src="../video/audiodoggy.mp4" type="video/mp4" />
+        <track label="English" kind="subtitles" srclang="en" src="../video/subtitles/subtitlesEN.vtt" default>      
+        <track label="Deutsch" kind="subtitles" srclang="de" src="../video/subtitles/subtitlesDE.vtt">     
+    </video>
+    <br/>
+
+    <h1>Selfmade GIF</h1>
+    <img src="../video/RunningDog.gif" alt="Computer man">
+
+
+    <br/>
+    <h1>Edited Dog Videos</h1>
+    <video id="video" controls>
+        <source src="../video/EditedVideo.mp4" type="video/mp4" /> 
+    </video>
+    <video id="video" controls>
+        <source src="../video/DiscountDogs.mp4" type="video/mp4" /> 
+    </video>
+    <video id="video" controls>
+        <source src="../video/JumpingDog.mp4" type="video/mp4" /> 
+    </video>
+</html>

@@ -14,17 +14,56 @@
             <div class="logo">
                 <img height="50" src="./picture/logo.png" />
             </div>
-            <a href="./home" class="home-button">Home</a>
-            <a href="./pages/livestream.html" class="video-button">Livestream</a>
-            <a href="./photo" class="home-button">Photos</a>
+            <a href="./index.html" class="home-button">Home</a>
+            <a href="./pages/livestream.html" class="video-button">Streams</a>
+            <a href="./pages/photos.html" class="home-button">Photos</a>
+            <a href="./pages/video.html" class="video-button">Videos</a>
+            <a href="./pages/imprint.html" class="home-button">Imprint</a>
         </div>
     </div>
-    <footer>
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-            <img alt="Creative Commons Lizenzvertrag" style="border-width:0"
-                src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-        </a>
-    </footer>
+
+        <div >
+            <div>
+                <h1>Dogs</h1>
+
+                <h3>Dynamisch Bild anzeigen mit srcset</h5>
+
+                <h4>
+                    Je nach der Bildschirmgrösse wird ein anderes Bild angezeigt. <br>
+                    Bei weniger als 500px wird <code>dog_small.jpg</code>, <br>
+                    Bei weniger als 1000px <code>dog_medium.jpg</code>, <br>
+                    Bei weniger als 2000px <code>dog_large.jpg</code>. <br><br>
+                    Bitte beachte aber, wenn <code>dog_large.jpg</code> schon geladen ist bringt die Veränderung der
+                    Bildschirmgrösse nichts, da schon das grösste Bild geladen ist.
+                </h4>
+
+                <img src="picture/dog_sizes/CuteDog.jpg" alt="srcset-Attribut mit w-Werten"
+                    style="max-width: 100%;" srcset="
+            picture/dog_sizes/CuteDog_Small.jpg 500w,
+            picture/dog_sizes/CuteDog_Medium.jpg 1000w,
+            picture/dog_sizes/CuteDog_Large.jpg 2000w" sizes="(min-width: 800px) 100vw, (min-width: 450px) 100vw, 100vw">
+            </div>
+        </div>
+        
+        <br/>
+        <h1>Picture Tag</h1>
+        <picture>
+            <source media="(min-width: 500px)" srcset="./picture/categories/DoubleDog.jpg"> 
+            <source media="(max-width: 500px)" srcset="./picture/dog_sizes/CuteDog_Small.jpg"> 
+            <!-- Backup for older Browsers --> 
+            <img src="./picture/categories/DoubleDog.jpg"> 
+        </picture>    
+        <br/>
+        <h3>Random Audio</h3>
+        <audio controls>
+            <source src="./audio/random_audio.ogg" type="audio/ogg">
+        </audio>
+        <audio controls>
+            <source src="./audio/random_audio2.ogg" type="audio/ogg">
+        </audio>
+        <audio controls>
+            <source src="./audio/random_audio3.ogg" type="audio/ogg">
+        </audio>
 
 </body>
 

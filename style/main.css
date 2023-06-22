@@ -1,13 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body,
 html {
+    max-width: 100%;
+    overflow-x: hidden;
     height: 100%;
     width: 100%;
     background-color: rgb(0, 0, 0);
+    margin-left: 1vw;
 }
 
 .header {
@@ -15,7 +19,7 @@ html {
     height: 10vh;
     display: flex;
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
 
 }
 
@@ -24,7 +28,6 @@ a {
 }
 
 .logo {
-    padding: 2vh 2vw;
     font-size: 3vh;
     color: white;
 }
@@ -52,4 +55,28 @@ a {
     border-radius: 0.25rem;
     background-color: rgb(255, 127, 39);
     margin-right: 1vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    margin-bottom: 0.5vw;
+}
+
+.player-border, video {
+    display: inline;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: rgb(255, 127, 39);
+}
+
+#twitch-embed {
+    display: inline;
+    width: 600px;
+}
+
+picture {   
+        display: flex;
+        max-width: 100%;
+        max-height: 100vh;
+        height: auto;
 }
