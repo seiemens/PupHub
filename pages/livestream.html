@@ -1,0 +1,49 @@
+!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <link rel="stylesheet" href="../style/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PupHub</title>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <span>Pup</span>
+                <span class="l">Hub</span>
+            </div>
+            <a href="../index.html" class="home-button">Home</a>
+            <a href="./livestream.html" class="video-button">Livestream</a>
+            <a href="./photo" class="home-button">Photos</a>
+        </div>
+    </div>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <footer>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+            <img alt="Creative Commons Lizenzvertrag" style="border-width:0"
+                src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+        </a>
+    </footer>
+
+</body>
+
+</html>
+
+
+<!-- Load the Twitch embed JavaScript file -->
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+<!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+<script type="text/javascript">
+    new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "lemoncarrot"
+        // Only needed if this page is going to be embedded on other websites
+    });
+</script>
